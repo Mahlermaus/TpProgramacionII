@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FacturacionBackend\FacturacionBackend.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="DsClientes.Designer.cs">
+      <DependentUpon>DsClientes.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="TpProgFacturacionDataSet1.Designer.cs">
+      <DependentUpon>TpProgFacturacionDataSet1.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="TpProgFacturacionDataSet2.Designer.cs">
+      <DependentUpon>TpProgFacturacionDataSet2.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DsArticulos.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>DsArticulos.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="DsClientes.xss">
+      <DependentUpon>DsClientes.xsd</DependentUpon>
+    </None>
+    <None Update="TpProgFacturacionDataSet.xsc">
+      <DependentUpon>TpProgFacturacionDataSet.xsd</DependentUpon>
+    </None>
+    <None Update="TpProgFacturacionDataSet1.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>TpProgFacturacionDataSet1.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Update="TpProgFacturacionDataSet2.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>TpProgFacturacionDataSet2.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+  </ItemGroup>
+
+</Project>
